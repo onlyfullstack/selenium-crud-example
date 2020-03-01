@@ -48,4 +48,10 @@ export class ProductListComponent implements OnInit {
       error => this.errorMessage = <any>error
     );
   }
+
+  delete(id: number): void {
+    alert(this.products.length);
+    this.products = this.products.filter(p => p.id != id);
+    alert(this.products.length);
+  }
 }
